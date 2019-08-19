@@ -3,13 +3,18 @@
 const path = require('path');
 
 module.exports = {
-    entry: {
-        index: './src/index.js',
-        search: './src/search.js'
-    },
+    entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: 'bundle.js'
     },
-    mode: 'production'
+    mode: 'production',
+    module: {
+        rules: [
+            {
+                test: /.js$/,
+                use: 'babel-loader'
+            }
+        ]
+    }
 };
