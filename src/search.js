@@ -2,14 +2,12 @@
 
 import React from "react";
 import ReactDom from "react-dom";
-import './search.css';
+import "./search.css";
 
 class Search extends React.Component {
-  constructor() {}
-
   render() {
-    return <div className="search-text">search</div>;
+    return <div className="search-text">search context</div>;
   }
 }
 
-ReactDom.render(<Search />, Document.getElementById("root"));
+ReactDom.render(<Search />, document.getElementById("root"));
